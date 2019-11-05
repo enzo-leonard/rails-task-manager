@@ -1,0 +1,6 @@
+<h1>Liste des taches</h1>
+<% @tasks.each do |item| %>
+ <li> <a href=<%="/tasks/#{item.id}"%>><%="#{item.title}" %></a> <%=item.details%> | <%=item.completed%>  </li>
+<%end%>
+
+<%= link_to new_task_path, new_task_path%>
